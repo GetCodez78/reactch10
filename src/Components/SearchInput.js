@@ -18,14 +18,14 @@ class SearchInput extends Component {
     }
     render() {
         return (
-           <Well>
-               <FormControl
+            <Well>
+                <FormControl
                     type="text"
                     value={this.state.value}
                     placeholder="Search Books..."
                     onChange={this.onChange.bind(this)}
-               />
-               </Well>
+                />
+            </Well>
         );
     }
 }

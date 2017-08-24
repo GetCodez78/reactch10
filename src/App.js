@@ -16,10 +16,10 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.getBooks();
+    this.getBooks();  // 1. update state onload 
   }
 
-  getBooks() {
+  getBooks() {   // updates state 
     axios.request({
       method:'get',
       url:'https://www.googleapis.com/books/v1/volumes?q='+this.state.text
@@ -32,7 +32,7 @@ class App extends Component {
   });
 }
 handleChange(text) {
-  this.setState({text:text}, this.getBooks());
+  this.setState({text:text}  /* state's text is set to parameter text */, this.getBooks() /* getBooks based on new state */ );
 }
   render() {
     return (
