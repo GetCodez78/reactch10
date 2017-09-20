@@ -35,7 +35,7 @@ class App extends Component {
   });
 }
 handleChange(text) {
-  this.setState({text:text}  /* state's text is set to parameter text */, this.getBooks() /* getBooks based on new state */ );
+  this.setState({text:text}, this.getBooks() /* getBooks based on new state */ );
 }
   render() {
     return (
